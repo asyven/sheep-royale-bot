@@ -3,7 +3,9 @@
 ---
 Может автоматически играть по вашим билдам, открывать сундуки и получать награды, поддерживает несколько аккаунтов.
 
-![video display](./media/display.mp4)
+
+https://user-images.githubusercontent.com/10788200/212026941-192f81f6-1bd8-419e-820d-0370df1c0032.mp4
+
 
 Установка:
 - `git clone https://github.com/asyven/sheep-royale-bot.git`
