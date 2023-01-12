@@ -1,0 +1,25 @@
+[
+  {
+    "id": 12341234,
+    "build": 2,
+    "config": {
+      "unlockChest": true,
+      "watchChestAd": true,
+      "openChest": true,
+      "showGame": true,
+      "infinityPlay": true
+    },
+    "params": "vk_access_token_settings=&vk_app_id=51491054&vk_are_notifications_enabled=0&vk_is_app_user=1&vk_is_favorite=0&vk_language=ru&vk_platform=mobile_web&vk_ref=other&vk_ts=123123&vk_user_id=12341234&sign=askdjjkasdhjhkajsdhkjahjsd"
+  },
+  {
+    "id": 56785678,
+    "config": {
+      "unlockChest": true,
+      "watchChestAd": true,
+      "openChest": true,
+      "showGame": false,
+      "infinityPlay": true
+    },
+    "params": "vk_access_token_settings=&vk_app_id=51491054&vk_are_notifications_enabled=0&vk_is_app_user=1&vk_is_favorite=0&vk_language=ru&vk_platform=desktop_web&vk_ref=other&vk_ts=123123&vk_user_id=56785678&sign=asdjhasdhjhasdhhjasdahjsd"
+  }
+]
