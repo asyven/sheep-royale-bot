@@ -157,21 +157,22 @@
     }
   },
   {
-    "cards": ["crashedPlane", "bigSheep", "pasture", "doubleFarm"],
+    "cards": ["fastSheep", "farm", "pasture", "doubleFarm"],
 
     "structure": [
       ["doubleFarm",{"x":50,"y":25}],
       ["doubleFarm",{"x":150,"y":25}],
       ["doubleFarm",{"x":250,"y":25}],
-      
+
       ["doubleFarm",{"x":50,"y":75}],
-      ["doubleFarm",{"x":150,"y":75}],
       ["doubleFarm",{"x":250,"y":75}],
-      
+
+      ["pasture",{"x":125,"y":75}],
+      ["doubleFarm",{"x":50,"y":125}],
+      ["pasture",{"x":175,"y":75}],
+      ["doubleFarm",{"x":250,"y":125}],
       ["pasture",{"x":125,"y":125}],
       ["pasture",{"x":175,"y":125}],
-      ["doubleFarm",{"x":50,"y":125}],
-      ["doubleFarm",{"x":250,"y":125}],
 
       ["doubleFarm",{"x":50,"y":175}],
       ["doubleFarm",{"x":250,"y":175}],
@@ -186,24 +187,52 @@
       ["doubleFarm",{"x":50,"y":275}],
       ["doubleFarm",{"x":250,"y":275}],
       ["pasture",{"x":125,"y":275}],
-      ["pasture",{"x":175,"y":275}],
-
-      ["crashedPlane",{"x":125,"y":325}],
-      ["crashedPlane",{"x":175,"y":325}],
-      ["crashedPlane",{"x":125,"y":375}],
-      ["crashedPlane",{"x":175,"y":375}]
+      ["pasture",{"x":175,"y":275}]
     ],
 
     "def": {
       "threshold": 250,
       "minThreshold": 125,
-      "units": ["bigSheep"]
+      "units": ["fastSheep","fastSheep","fastSheep","fastSheep","fastSheep"]
     },
 
     "push": {
       "threshold": 275,
       "minThreshold": 101,
-      "units": ["bigSheep"]
+      "units": ["fastSheep","fastSheep","fastSheep","fastSheep","fastSheep"]
+    }
+  },
+  {
+    "cards": ["fastSheep", "farm", "pasture", "doubleFarm"],
+
+    "structure": [
+      ["doubleFarm",{"x":50,"y":25}],
+      ["doubleFarm",{"x":150,"y":25}],
+      ["doubleFarm",{"x":250,"y":25}],
+
+      ["doubleFarm",{"x":50,"y":75}],
+      ["doubleFarm",{"x":150,"y":75}],
+      ["doubleFarm",{"x":250,"y":75}],
+
+      ["doubleFarm",{"x":50,"y":125}],
+      ["doubleFarm",{"x":150,"y":125}],
+      ["doubleFarm",{"x":250,"y":125}],
+
+      ["doubleFarm",{"x":50,"y":175}],
+      ["doubleFarm",{"x":150,"y":175}],
+      ["doubleFarm",{"x":250,"y":175}]
+    ],
+
+    "def": {
+      "threshold": 250,
+      "minThreshold": 125,
+      "units": ["fastSheep","fastSheep","fastSheep","fastSheep","fastSheep"]
+    },
+
+    "push": {
+      "threshold": 275,
+      "minThreshold": 101,
+      "units": ["fastSheep","fastSheep","fastSheep","fastSheep","fastSheep"]
     }
   }
 ]

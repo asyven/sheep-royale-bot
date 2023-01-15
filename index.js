@@ -21,7 +21,10 @@ const ratingMode = async (accounts, builds) => {
         let config = account.config || {};
         account.api = new SheepApi(account.params, {...defaultConfig, loopGame: true, ...config});
         await account.api.init();
-        account.api.game.setBuild(builds[account.build || 0]);
+        let build = builds[account.build || 0];
+        account.api.game.setBuild(build);
+        // await Promise.all(build.cards.map((e, i) => (account.api.changeDeck(e, i+1))));
+        // await Promise.all(build.cards.map((e, i) => (account.api.changeDeck(e, i+1))));
 
         let url, _id = null;
 
@@ -86,7 +89,7 @@ const lobbyMode = async (accounts, builds) => {
 
     let builds = JSON.parse((await fs.readFile("./builds.json")).toString());
     let accounts = JSON.parse((await fs.readFile("./accounts.json")).toString());
-    
+
     switch (response.mode) {
         case "rating":
             await ratingMode(accounts, builds)
