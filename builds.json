@@ -241,17 +241,58 @@
     "structure": [
       ["doubleFarm",{"x":50,"y":25}],
       ["doubleFarm",{"x":50,"y":75}],
-      
+
       ["deadFarm",{"x":150,"y":50}],
       ["deadFarm",{"x":250,"y":50}],
 
       ["deadFarm",{"x":50,"y":150}],
       ["deadFarm",{"x":150,"y":150}],
       ["deadFarm",{"x":250,"y":150}],
-      
+
       ["deadFarm",{"x":50,"y":200}],
       ["deadFarm",{"x":150,"y":200}],
       ["deadFarm",{"x":250,"y":200}]
+    ],
+
+    "def": {
+      "threshold": 250,
+      "minThreshold": 125,
+      "units": ["fastSheep","fastSheep","fastSheep","fastSheep","fastSheep"]
+    },
+
+    "push": {
+      "threshold": 275,
+      "minThreshold": 101,
+      "units": ["fastSheep","fastSheep","fastSheep","fastSheep","fastSheep"]
+    }
+  },
+  {
+    "cards": ["fastSheep", "deadFarm", "pasture", "doubleFarm"],
+
+    "structure": [
+      ["doubleFarm",{"x":50,"y":25}],
+      ["doubleFarm",{"x":50,"y":75}],
+
+      ["deadFarm",{"x":150,"y":50}],
+      ["deadFarm",{"x":250,"y":50}],
+
+      ["pasture",{"x":25,"y":125}],
+      ["pasture",{"x":75,"y":125}],
+      ["pasture",{"x":125,"y":125}],
+      ["pasture",{"x":175,"y":125}],
+      ["pasture",{"x":225,"y":125}],
+
+      ["pasture",{"x":25,"y":175}],
+      ["pasture",{"x":75,"y":175}],
+      ["pasture",{"x":125,"y":175}],
+      ["pasture",{"x":175,"y":175}],
+      ["pasture",{"x":225,"y":175}],
+      
+      ["pasture",{"x":25,"y":225}],
+      ["pasture",{"x":75,"y":225}],
+      ["pasture",{"x":125,"y":225}],
+      ["pasture",{"x":175,"y":225}],
+      ["pasture",{"x":225,"y":225}]
     ],
 
     "def": {
