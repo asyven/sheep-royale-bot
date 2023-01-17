@@ -74,6 +74,15 @@ const lobbyMode = async (accounts, builds) => {
     account.api.game.connect(url, _id);
 }
 
+const infoMode = async (accounts) => {
+    for (const account of accounts) {
+        let config = account.config || {};
+        account.api = new SheepApi(account.params, {...defaultConfig, loopGame: true, ...config});
+        await account.api.init();
+        await sleep(200);
+    }
+}
+
 (async () => {
     const response = argv.mode ? {mode: argv.mode} : await prompts([
         {
@@ -83,6 +92,7 @@ const lobbyMode = async (accounts, builds) => {
             choices: [
                 {title: 'Rating', description: 'Starts rating matchmaking', value: 'rating'},
                 {title: 'Lobby', description: 'Creates lobby and join from another account', value: 'lobby'},
+                {title: 'Info', description: 'Just display account(s) info', value: 'info'},
             ],
         }
     ]);
@@ -112,6 +122,9 @@ const lobbyMode = async (accounts, builds) => {
                 },
             ]);
             await lobbyMode(lobbySettings.lobbyAccounts, builds)
+            break;
+        case "info":
+            await infoMode(accounts)
             break;
     }
 })()
