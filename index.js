@@ -99,6 +99,7 @@ const infoMode = async (accounts) => {
 
     let builds = JSON.parse((await fs.readFile("./builds.json")).toString());
     let accounts = JSON.parse((await fs.readFile("./accounts.json")).toString());
+    accounts = accounts.filter(({disabled = false})=> (!disabled));
 
     switch (response.mode) {
         case "rating":
