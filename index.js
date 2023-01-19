@@ -19,12 +19,12 @@ let defaultConfig = {
 const ratingMode = async (accounts, builds) => {
     for (const account of accounts) {
         let config = account.config || {};
+        let build = builds[account.build || 0];
+        
         account.api = new SheepApi(account.params, {...defaultConfig, loopGame: true, ...config});
         await account.api.init();
-        let build = builds[account.build || 0];
         account.api.game.setBuild(build);
-        // await Promise.all(build.cards.map((e, i) => (account.api.changeDeck(e, i+1))));
-        // await Promise.all(build.cards.map((e, i) => (account.api.changeDeck(e, i+1))));
+        await account.api.changeDeck(build.cards);
 
         let url, _id = null;
 
